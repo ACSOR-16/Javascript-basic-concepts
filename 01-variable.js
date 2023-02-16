@@ -4,7 +4,7 @@ const lastnameparner = "Aguirre";
 let emailGmail = "oscar.aguirre.tarazona@gmail.com";
 
 // Declarar una variable
-let emailhotmacil = "oscar_w_ili@hotmail.com"
+let emailhotmacil;
 const lastname = "tarazona";
 
 // Inicializar y reinicializar una variable
@@ -20,3 +20,11 @@ let numer = 123705;
 let mayorDeEdad = tru || false;
 // undefined
 let newPassword = undefined;
+// array
+let frutas = ["melon", "platano"]
+// objeto
+let automovil = {
+    marcar: "toyota",
+    modelo: "suv",
+    year: 2022,
+}

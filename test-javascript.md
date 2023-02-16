@@ -6,11 +6,11 @@
 
 - ¿Qué es una variable y para qué sirve?
 
-es una espacio en memoria para guardar tipos de datos funciones y demas usos que se le puede atribuir.
+es una espacio en memoria para guardar tipos de datos o valores funciones y demas usos que se le puede atribuir.
 
 - ¿Cuál es la diferencia entre declarar e inicializar una variable?
 
-declarar tiene la particularidad de crearla como tal, mientras queque inicializar y/o reinicializar es asignarle un valor o volver a reasignar otro valor.
+declarar tiene la particularidad de crearla como tal (const name;), mientras queque inicializar (name = oscar) y/o reinicializar (name = wilfredo)es asignarle un valor o volver a reasignar otro valor.
 
 - ¿Cuál es la diferencia entre sumar números y concatenar strings?
 
@@ -60,27 +60,33 @@ let dineroReal = dineroAhorrado - deudas;
 
 - ¿Qué es una función?
 
-
+un conjunto de sentencias o encapsular bloques de codigo para ser usado, ejecutados y reutilizar par calcular de manera mas 
 
 - ¿Cuándo me sirve usar una función en mi código?
 
-
+nos srive siempre en cuando querramos  automatizar algo por decir un patron que se repita y podamos encapsular y reutilizarlo cuando sea necesario.
+tambien  nos sirve por un tema de orden y legibilidad de nuestro codigo.
 
 - ¿Cuál es la diferencia entre parámetros y argumentos de una función?
 
-
+las funciones reciben parametros cuando estas estan declaradas, y son argumentos cuando enviamos a que sean ejecutadas
 
 ### 2️⃣ Convierte el siguiente código en una función, pero, cambiando cuando sea necesario las variables constantes por parámetros y argumentos en una función:
 
 ```
-const name = "Juan David";
-const lastname = "Castro Gallego";
+const name = "Oscar Wilfredo";
+const lastname = "Aguirre Tarazona";
 const completeName = name + lastname;
-const nickname = "juandc";
+const nickname = "Acsor";
 
 console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
 ```
 
+function usuario (name, lastName, nickName) {
+    const completeName = name + lastName;
+    
+    console.log(`mi nombre es ${completeNanme}, pero prefiero que me digas ${nickName}`)
+}
 
 ## Condicionales
 
