@@ -52,7 +52,7 @@ let deudas = 20;
 ```
 let nombreCompleto = nombre + ' ' + apellido;
 let dineroReal = dineroAhorrado - deudas;
-```
+
 
 ## Funciones
 
@@ -81,20 +81,29 @@ const nickname = "Acsor";
 
 console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
 ```
-
+```
 function usuario (name, lastName, nickName) {
     const completeName = name + lastName;
     
     console.log(`mi nombre es ${completeNanme}, pero prefiero que me digas ${nickName}`)
 }
-
+```
 ## Condicionales
 
 ### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
 
 - ¿Qué es un condicional?
+
+por su propio nombre un condicional ejecuta un bloque de codigo de acuerdo a sus condiciones o validicion
+
 - ¿Qué tipos de condicionales existen en JavaScript y cuáles son sus diferencias?
+
+if, else if, else y switch
+IF puede existir una o mas condiciones no estan sujetas a a una sola validacion a diferencia del SWITCH que se compara una condicion con distintos cases
+
 - ¿Puedo combinar funciones y condicionales?
+
+si las funciones pueden encapsular cualquier bloque de codigo, esto incluye a la condicion tambien.
 
 ### 2️⃣ Replica el comportamiento del siguiente código que usa la sentencia switch utilizando if, else y else if:
 
@@ -115,7 +124,19 @@ switch (tipoDeSuscripcion) {
        console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
        break;
 }
+
 ```
+``
+if(tipoDeSuscripcion == "Free") {
+     console.log("Solo puedes tomar los cursos gratis");
+} else if(tipoDeSuscripcion == "Basic") {
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+} else if(tipoDeSuscripcion == "Expert") {
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+} else if (tipoDeSuscripcion == "Expert Duo") {
+    console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+}
+``
 
 ### 3️⃣ Replica el comportamiento de tu condicional anterior con if, else y else if, pero ahora solo con if (sin else ni else if).
 
