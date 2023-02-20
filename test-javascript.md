@@ -41,7 +41,7 @@ let mail = 'oscar.tarazonao@gmail.com';
 let esMayorDeEdad = true;
 let dineroAhorrado = 2000;
 let deudas = 20;
-```
+
 
 
 ### 4️⃣ Calcula e imprime las siguientes variables a partir de las variables del ejemplo anterior:
@@ -49,11 +49,10 @@ let deudas = 20;
 - Nombre completo (nombre y apellido)
 - Dinero real (dinero ahorrado menos deudas)
 
-```
+```js
 let nombreCompleto = nombre + ' ' + apellido;
 let dineroReal = dineroAhorrado - deudas;
-
-
+```
 ## Funciones
 
 ### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
@@ -73,7 +72,7 @@ las funciones reciben parametros cuando estas estan declaradas, y son argumentos
 
 ### 2️⃣ Convierte el siguiente código en una función, pero, cambiando cuando sea necesario las variables constantes por parámetros y argumentos en una función:
 
-```
+```js
 const name = "Oscar Wilfredo";
 const lastname = "Aguirre Tarazona";
 const completeName = name + lastname;
@@ -81,7 +80,7 @@ const nickname = "Acsor";
 
 console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
 ```
-```
+```js
 function usuario (name, lastName, nickName) {
     const completeName = name + lastName;
     
@@ -107,7 +106,7 @@ si las funciones pueden encapsular cualquier bloque de codigo, esto incluye a la
 
 ### 2️⃣ Replica el comportamiento del siguiente código que usa la sentencia switch utilizando if, else y else if:
 
-```
+```js
 const tipoDeSuscripcion = "Basic";
 
 switch (tipoDeSuscripcion) {
@@ -126,7 +125,7 @@ switch (tipoDeSuscripcion) {
 }
 
 ```
-``
+```js
 if(tipoDeSuscripcion == "Free") {
      console.log("Solo puedes tomar los cursos gratis");
 } else if(tipoDeSuscripcion == "Basic") {
@@ -136,7 +135,7 @@ if(tipoDeSuscripcion == "Free") {
 } else if (tipoDeSuscripcion == "Expert Duo") {
     console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
 }
-``
+```
 
 ### 3️⃣ Replica el comportamiento de tu condicional anterior con if, else y else if, pero ahora solo con if (sin else ni else if).
 
@@ -148,13 +147,24 @@ if(tipoDeSuscripcion == "Free") {
 ### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
 
 - ¿Qué es un ciclo?
+
+forma de ejecutar un bloque de codigo interandolo o repitiendolo bajo una condicion para que este termine de ejecutarse y parar.
+
 - ¿Qué tipos de ciclos existen en JavaScript?
+
+while, for, for of, do while.
+
 - ¿Qué es un ciclo infinito y por qué es un problema?
+
+cuando nuesta condicion no se cumple y termina en un clico infinito de la misma ejecucion del mismo codigo, por ellos es importante que la condicion sea correctamente validada.
+
 - ¿Puedo mezclar ciclos y condicionales?
+
+si, pero de modo sustancial los ciclo son condicionados si no se ejecutarian infinitamente, nada nos impide agregarar otras condici0ones dentro del ciclo.
 
 ### 2️⃣ Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:
 
-```
+```js
 for (let i = 0; i < 5; i++) {
     console.log("El valor de i es: " + i);
 }
@@ -164,10 +174,30 @@ for (let i = 10; i >= 2; i--) {
 }
 ```
 
+```js
+let i = 0;
+while (i < 5) {
+    console.log("El valor de i es: " + i);
+    i++;
+}
+
+let i = 10;
+while (i >= 2) {
+    console.log("El valor de i es: " + i);
+    i--;
+}
+```
+
 ### 3️⃣ Escribe un código en JavaScript que le pregunte a los usuarios cuánto es `2 + 2`. Si responden bien, mostramos un mensaje de felicitaciones, pero si responden mal, volvemos a empezar.
 
 > 💡 Pista: puedes usar la función prompt de JavaScript.
-
+```js
+let respuesta;
+while (respuesta != "4") {
+    let pregunta = prompt("cuanto es 2 + 2: ");
+    respuesta = pregunta;
+}
+```
 
 ## Listas
 
