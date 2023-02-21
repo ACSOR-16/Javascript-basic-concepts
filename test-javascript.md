@@ -33,6 +33,7 @@ es el simbolo "+" con el si el tipo de datos es de tipo numero lo suma y si es d
 
 ### 3️⃣ Traduce a código JavaScript las variables del ejemplo anterior y deja tu código en los comentarios.
 
+```js
 let nombre = 'Oscar Wilfredo';
 let apellido = 'Aguirre Tarazona';
 let username = 'Acsor';
@@ -41,7 +42,7 @@ let mail = 'oscar.tarazonao@gmail.com';
 let esMayorDeEdad = true;
 let dineroAhorrado = 2000;
 let deudas = 20;
-
+```
 
 
 ### 4️⃣ Calcula e imprime las siguientes variables a partir de las variables del ejemplo anterior:
@@ -141,6 +142,26 @@ if(tipoDeSuscripcion == "Free") {
 
 > 💡 Bonus: si ya eres una experta o experto en el lenguaje, te desafío a comentar cómo replicar este comportamiento con arrays y un solo condicional. 😏
 
+```js
+const tipoDeSuscripciones = {
+    free: "Solo puedes tomar los cursos gratis",
+    basic: "Puedes tomar casi todos los cursos de Platzi durante un mes",
+    expert: "Puedes tomar casi todos los cursos de Platzi durante un año",
+    expertDuo: "Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año",
+}
+
+function conseguirTipoDeSuscripcion(suscripcion) {
+    
+    if(tipoDeSuscripciones[suscripcion]) {
+    console.log(tipoDeSuscripciones[suscripcion]);
+    return;
+    }
+    
+    console.warm("Este tipo de suscripcion no existe o no esta disponible");
+}
+
+conseguirTipoDeSuscripcion();
+```
 
 ## Ciclos
 
@@ -204,21 +225,73 @@ while (respuesta != "4") {
 ### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
 
 - ¿Qué es un array?
+
+es una lista de elementos.
+
+```js
+const array = ["holi", 1, true, false];
+```
+
 - ¿Qué es un objeto?
+
+Es una lista de elementos, pero con la particularidad que tiene un nombre clave con keys y values
+
+```js
+const obj = {
+    numero: 1,
+    numero: 3,
+    comidasFavoritas: ["gato","perro","pollo"],
+};
+```
+
 - ¿Cuándo es mejor usar objetos o arrays?
+
+cuando quieras guardas varias elementos sin ningana atributo en especial es mejor usar array en caso quieras guardar un elemento pero con ciertas particularidad o palabras clave es mejor utilizar un objeto.
+
 - ¿Puedo mezclar arrays con objetos o incluso objetos con arrays?
+
+si, los arrays puedes guardar objetos, y los objetos pueden guardar arrays entre sus propiedades.
 
 ### 2️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.
 
+```js
+function imprimirPrimerElementoArray (arr) {
+    console.log(arr[0]);
+}
+
+imprimirPrimerElementoArray(["gato", "perro", "hamster", "canario"]); // gato
+```
+
 ### 3️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el array completo).
+
+```js
+function imprimirElementoPorElemento (arr) {
+    for(let index = 0; index < arr.length; index++) {
+        console.log(arr[index]);
+    }
+}
+
+imprimirElementoPorElemento(["gato", "perro", "hamster", "canario"]); // gato perro hamster canario
+```
 
 ### 4️⃣ Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el objeto completo).
 
+```js
+const obj = {
+    numero: 1,
+    numero: 3,
+    comidasFavoritas: ["gato","perro","pollo"],
+};
 
-## ¿Cómo te fue? 🏆
+function imprimirElementoPorElementoObjeto (obj) {
+    const arr = object.values(obj);
+    for(let index = 0; index < arr.length; index++) {
+        console.log(arr[index]);
+    }
+}
 
-**¡Felicidades por completar la prueba de JavaScript!** Confío en que hayas completado cada paso y hayas pausado para repasar los temas de los ejercicios que se te complicaron.
-
-Ahora sí, continúa a la siguiente clase, pero recuerda que **ya no puedes abandonar el curso**, debes completarlo hasta el final. No importa cuánto tiempo te tome. **Yo sé que tú puedes. Y tú deberías de saberlo también.**
-
-¡Te espero en la siguiente clase para comenzar!
+imprimirElementoPorElementoObjeto(obj);
+// 1
+// 2
+// ["gato","perro","pollo"]
+```
